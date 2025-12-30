@@ -1,23 +1,352 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Home</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <!--
-      Need a visual blank slate?
-      Remove all code in `styles.css`!
-    -->
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
-  </head>
-  <body>
-    <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a href="/page2.html">Other page</a>
-    </nav>
-    <main>
-      <h1>Home page</h1>
-    </main>
-  </body>
-</html>
+
+  <!-- Schema.org LocalBusiness 마크업(JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MovingCompany",
+    "name": "서울-부산 장거리 포장이사 전문가이드",
+    "image": "https://도메인/로고.png",
+    "url": "https://도메인/seoul-busan-moving-cost",
+    "telephone": "031-123-4567",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "주요 거점 사무소",
+      "addressLocality": "서울/부산",
+      "addressRegion": "KR",
+      "postalCode": "00000",
+      "addressCountry": "KR"
+    },
+    "areaServed": [
+      { "@type": "City", "name": "서울특별시" },
+      { "@type": "City", "name": "부산광역시" }
+    ],
+    "priceRange": "₩₩₩",
+    "description": "서울과 부산을 잇는 장거리 이사 전문 서비스. 짐량에 따른 상세 비용 분석 및 맞춤형 견적 제공."
+  }
+  </script>
+
+  <!-- Google Fonts for professional look -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+  <!-- 디자인 개선: 부드러운 색감 및 시각적 계층 구조 적용 -->
+  <style>
+    body { font-family: 'Noto Sans KR', sans-serif; margin:0; padding:0; background:#f0f4f8; color:#333; line-height:1.7; }
+    header { background:#ffffff; padding:40px 20px; text-align:center; box-shadow:0 4px 12px rgba(0,0,0,0.05); }
+    section { max-width:900px; margin:20px auto; padding:30px; background:#ffffff; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.05); }
+    h1 { font-size:2.8rem; color:#0b3d91; margin-bottom:15px; font-weight:900; line-height:1.3; }
+    h2 { font-size:2.2rem; color:#0b3d91; margin-top:25px; margin-bottom:15px; padding-bottom:10px; border-bottom:3px solid #a3c4ff; font-weight:700; }
+    h3 { font-size:1.6rem; color:#4285f4; margin-top:20px; margin-bottom:10px; font-weight:700; border-left:4px solid #a3c4ff; padding-left:10px; }
+    p, li, td, th { font-size:1rem; color:#555; }
+    ul, ol { padding-left:25px; margin-bottom:20px; }
+    li { margin-bottom:10px; }
+    table { width:100%; border-collapse: collapse; margin:25px 0; font-size:0.95rem; }
+    th, td { border:1px solid #ccddee; padding:15px; text-align:left; }
+    th { background:#4285f4; color:#fff; font-weight:700; }
+    tr:nth-child(even) { background-color: #f8f8f8; }
+    a { color:#0b3d91; text-decoration:none; transition: color 0.3s ease; }
+    a:hover { text-decoration:underline; color:#3367d6; }
+    .btn-cta {
+      display:inline-block;
+      padding:16px 35px;
+      background:#4285f4;
+      color:#fff;
+      font-weight:700;
+      border:none;
+      border-radius:30px;
+      box-shadow:0 6px 10px rgba(66, 133, 244, 0.3);
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      cursor:pointer;
+      text-decoration:none;
+      text-align:center;
+      font-size:1.1rem;
+    }
+    .btn-cta:hover {
+      background:#3367d6;
+      transform:translateY(-2px);
+    }
+    .highlight { font-weight: bold; color:#d93025; }
+    .callout { background:#e8f0fe; padding:20px; border-left:5px solid #4285f4; border-radius:8px; margin:20px 0; }
+    .anchor { display:block; position:relative; top:-100px; visibility:hidden; }
+    /* 반응형 */
+    @media(max-width:600px) {
+      body { padding:10px; }
+      header { padding:30px 15px; }
+      section { margin:10px auto; padding:20px; }
+      h1 { font-size:2rem; }
+      h2 { font-size:1.8rem; }
+      h3 { font-size:1.4rem; }
+      .btn-cta { width:100%; padding:15px 0; font-size:1rem; }
+      table, th, td { font-size:0.9rem; padding:12px; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>서울 부산 이사 비용: 장거리 포장이사 견적 가이드 (2026년 최신)</h1>
+    <p>서울에서 부산까지 이사, 복잡한 비용 견적을 전문가가 낱낱이 파헤쳐 드립니다. 합리적인 가격으로 안전하게 이사하는 방법을 알아보세요.</p>
+    <a class="btn-cta" href="#contact">서울 부산 이사 견적 문의하기</a>
+  </header>
+
+  <nav aria-label="페이지 내 이동">
+    <section>
+      <ul style="list-style-type: none; padding-left:0; display:flex; flex-wrap:wrap; justify-content:space-around; text-align:center;">
+        <li style="flex-basis:auto; margin:5px 10px;"><a href="#long-distance-factors">장거리 이사 비용 산정 기준</a></li>
+        <li style="flex-basis:auto; margin:5px 10px;"><a href="#pricing-by-size">짐량별 예상 비용 (평형대별)</a></li>
+        <li style="flex-basis:auto; margin:5px 10px;"><a href="#saving-tips">이사 비용 절약 꿀팁</a></li>
+        <li style="flex-basis:auto; margin:5px 10px;"><a href="#checklist">장거리 이사 체크리스트</a></li>
+        <li style="flex-basis:auto; margin:5px 10px;"><a href="#faq">자주 묻는 질문 (FAQ)</a></li>
+      </ul>
+    </section>
+  </nav>
+
+  <section id="long-distance-factors">
+    <span id="long-distance-factors-anchor" class="anchor"></span>
+    <h2>서울 부산 장거리 이사 비용, 무엇이 다를까요?</h2>
+    <p>서울과 부산을 잇는 장거리 이사는 일반적인 시내 이사와는 완전히 다른 접근이 필요합니다. 약 380km에 달하는 이동 거리와 운송 시간, 그리고 인력 배치 방식의 차이 때문에 비용 산정 기준이 복잡해집니다. 단순히 "포장이사"라고 해도, 장거리 이사는 운반 과정의 안정성, 통행료, 인건비, 대기 시간이 모두 비용에 반영되므로 견적 변동 폭이 큽니다.</p>
+
+    <h3>1. 비용 산출 핵심 변수: 거리와 짐의 양</h3>
+    <p>가장 중요한 두 가지 변수는 <span class="highlight">총 이동 거리</span>와 <span class="highlight">이삿짐의 양</span>입니다. 장거리 이사 견적은 기본적으로 차량 운송 비용이 차지하는 비중이 높습니다. 짐의 양이 많아 차량 톤수가 증가하거나, 특수 가구(피아노, 에어컨 등)가 포함되면 비용이 상승합니다. 짐을 줄이는 것만으로도 이사 비용을 크게 절감할 수 있으므로, 견적 방문 전에 불필요한 물건을 정리하는 것이 중요합니다.</p>
+
+    <h3>2. 인건비 및 서비스 종류에 따른 비용 차이</h3>
+    <p>장거리 이사는 이동 시간이 길어지므로 인력 투입 방식이 시내 이사와 다릅니다. 서울에서 포장을 완료하고 부산으로 이동하여 정리하는 과정이 하루 안에 끝나지 않고 1박 2일 일정으로 진행될 수 있습니다. 이에 따라 인건비와 숙박비 등 추가 비용이 발생할 수 있습니다.</p>
+    <p>서비스 종류별 비용 비교:</p>
+    <ul>
+      <li><span class="highlight">포장이사:</span> 포장부터 운반, 정리(배치)까지 모든 과정을 이사업체가 담당합니다. 고객은 귀중품만 챙기면 되며, 편리성이 가장 높습니다. 짐이 많거나 장거리 이사일 경우 파손 위험이 낮아 선호됩니다.</li>
+      <li><span class="highlight">반포장이사:</span> 큰 짐은 업체가 포장하고, 잔짐(주방용품, 생활용품)은 고객이 직접 포장하고 정리하는 방식입니다. 포장이사보다 비용이 저렴하지만, 고객의 노동력이 필요합니다.</li>
+      <li><span class="highlight">일반이사:</span> 운송만 업체가 담당하고, 포장과 정리는 고객이 100% 진행합니다. 짐이 적거나 1인 가구, 원룸 이사에 적합하며 비용이 가장 저렴합니다.</li>
+    </ul>
+
+    <h3>3. 이사 시기(성수기/비수기)와 손 없는 날</h3>
+    <p>이사 수요가 몰리는 <span class="highlight">성수기(3~5월, 8~9월)</span>나 <span class="highlight">손 없는 날</span>에는 이사 비용이 비수기 대비 20~30% 이상 증가합니다. 특히 서울-부산과 같은 장거리 이사는 날짜에 따른 가격 변동 폭이 더 크므로, 가능하다면 평일 비수기나 손 없는 날이 아닌 주말을 선택하는 것이 비용 절감에 유리합니다.</p>
+  </section>
+
+  <section id="pricing-by-size">
+    <span id="pricing-by-size-anchor" class="anchor"></span>
+    <h2>2026년 서울-부산 장거리 이사 짐량별 예상 비용 (평형대별)</h2>
+    <p>서울-부산 장거리 포장이사 견적은 짐량(평형대)에 따라 달라집니다. 다음 표는 2026년 최신 기준으로 짐량별/평형대별 예상 비용을 제시합니다. (단, 이는 평균적인 예상 비용이며, 사다리차, 가전 설치, 보관 이사 등 추가 옵션에 따라 달라질 수 있습니다.)</p>
+    <p class="callout"><strong>참고:</strong> 5톤 기준 서울-부산 포장이사 비용은 일반적으로 250만원~300만원 선에서 형성됩니다. 정확한 견적은 현장 방문 견적을 통해서만 확인 가능합니다.</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>이사 유형</th>
+          <th>짐량 기준 (차량 톤수)</th>
+          <th>예상 비용 (포장이사 기준, 2026년)</th>
+          <th>추천 대상</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1인 가구/원룸 이사</td>
+          <td>1톤 (용달) 또는 2.5톤 (1~2인 가구)</td>
+          <td>₩1,000,000 ~ ₩1,500,000</td>
+          <td>최소 짐량의 원룸, 1인 가구. 반포장이사 시 비용 절감 가능.</td>
+        </tr>
+        <tr>
+          <td>투룸/신혼부부 이사</td>
+          <td>5톤 (2~3인 가구)</td>
+          <td>₩2,000,000 ~ ₩2,800,000</td>
+          <td>일반적인 투룸/쓰리룸 거주. 짐이 적을 경우 5톤 차량 1대로 가능.</td>
+        </tr>
+        <tr>
+          <td>가족 이사 (30평대 이상)</td>
+          <td>7.5톤 이상 (4인 이상 가구)</td>
+          <td>₩2,800,000 ~ ₩4,000,000+</td>
+          <td>짐이 많은 가족, 4인 이상 거주. 짐량에 따라 5톤 차량 2대 또는 7.5톤 이상 필요.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>4. 이사 방식별 비용 상세 비교</h3>
+    <p>장거리 이사는 서비스 범위에 따라 비용 차이가 발생합니다. 고객의 참여 정도에 따른 비용을 비교하여 합리적인 선택을 할 수 있습니다. 아래 표는 일반적인 짐량(2.5톤~5톤)을 기준으로 한 서울-부산 장거리 이사 비용 비교입니다. (2026년 예상 기준)</p>
+    <table>
+      <thead>
+        <tr>
+          <th>구분</th>
+          <th>일반 이사 (운송만)</th>
+          <th>반포장 이사 (부분 포장)</th>
+          <th>포장 이사 (풀서비스)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>포장 범위</td>
+          <td>X (고객 직접 포장)</td>
+          <td>O (큰 짐 위주, 잔 짐 고객 포장)</td>
+          <td>O (모든 짐 포장 및 정리)</td>
+        </tr>
+        <tr>
+          <td>운송 및 운반</td>
+          <td>O (업체 담당)</td>
+          <td>O (업체 담당)</td>
+          <td>O (업체 담당)</td>
+        </tr>
+        <tr>
+          <td>정리 및 배치</td>
+          <td>X (고객 직접 정리)</td>
+          <td>X (고객 직접 정리)</td>
+          <td>O (업체 담당, 주방 정리 포함)</td>
+        </tr>
+        <tr>
+          <td>예상 비용 (5톤 기준)</td>
+          <td>₩1,800,000 ~ ₩2,200,000</td>
+          <td>₩2,200,000 ~ ₩2,600,000</td>
+          <td>₩2,500,000 ~ ₩3,000,000+</td>
+        </tr>
+        <tr>
+          <td>추천 이유</td>
+          <td>비용 절감이 최우선인 경우</td>
+          <td>가성비를 중시하고, 여유 시간이 있는 경우</td>
+          <td>시간 절약 및 편리성을 중시하는 경우, 장거리 이사 시 선호됨.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="saving-tips">
+    <span id="saving-tips-anchor" class="anchor"></span>
+    <h2>서울 부산 이사 비용을 절약하는 7가지 방법</h2>
+    <p>장거리 이사는 단거리 이사보다 비용 부담이 클 수밖에 없습니다. 하지만 몇 가지 팁을 활용하면 서울-부산 이사 비용을 상당 부분 절감할 수 있습니다.</p>
+    <div class="callout">
+      <h3>1. 불필요한 짐은 미리 정리 (짐량 최소화)</h3>
+      <p>이사 비용의 핵심 요소 중 하나는 짐의 양입니다. 짐이 줄어들면 이삿짐 차량 톤수나 작업 인원수를 줄일 수 있어 비용이 절감됩니다. 견적 방문 전 사용하지 않는 물건을 중고거래하거나 폐기물 수거 서비스를 이용하면 좋습니다. 특히 대형 폐기물 처리 시에는 관할 지자체 스티커를 부착하거나 '빼기'와 같은 폐기물 수거 업체를 활용하면 편리합니다.</p>
+    </div>
+    <div class="callout">
+      <h3>2. 이사 날짜 선택의 중요성 (비성수기/평일 활용)</h3>
+      <p>손 없는 날(길일)과 주말, 이사 성수기는 이사 비용이 상승하는 주요 원인입니다. 이사 날짜를 평일이나 비수기로 선택하면 비용을 대폭 절감할 수 있습니다. 이사 날짜를 유연하게 조정할 수 있다면, 주말보다 평일을 선택하여 견적 할인을 받는 것이 유리합니다.</p>
+    </div>
+    <div class="callout">
+      <h3>3. 여러 업체 견적 비교 (최소 3곳)</h3>
+      <p>같은 서울-부산 구간이라도 이사업체마다 견적이 다릅니다. 최소 3곳 이상의 전문 업체로부터 방문 견적을 받고 비교하는 것이 합리적인 가격을 찾는 가장 확실한 방법입니다. 견적 비교 플랫폼을 이용하거나 직접 문의하여 여러 업체의 서비스 범위와 가격을 꼼꼼히 대조해 보세요.</p>
+    </div>
+    <div class="callout">
+      <h3>4. 포장재 직접 준비 또는 반포장이사 고려</h3>
+      <p>일반적으로 포장이사 견적에는 포장재 비용이 포함됩니다. 짐이 적고 잔짐을 직접 포장할 여유가 있다면 반포장이사를 선택하여 비용을 절약할 수 있습니다. 짐이 많아도 포장재를 미리 준비하여 비용을 줄이는 방법도 있습니다.</p>
+    </div>
+    <div class="callout">
+      <h3>5. 추가 비용 항목 미리 확인 (사다리차, 가전 설치 등)</h3>
+      <p>이사 당일 예상치 못한 추가 비용이 발생하는 것을 방지해야 합니다. 사다리차 사용료, 에어컨 분리/설치 비용, 붙박이장 등 특수 가구 분해/조립 비용, 엘리베이터 사용료 등을 계약서에 명시해야 합니다. 서울과 부산의 아파트 관리 사무소나 빌라 주차장 여건에 따라 사다리차 비용이 달라질 수 있습니다.</p>
+    </div>
+    <div class="callout">
+      <h3>6. 보관 이사 비용 확인 (날짜가 맞지 않을 경우)</h3>
+      <p>퇴거 날짜와 입주 날짜가 맞지 않아 짐 보관이 필요한 경우, 보관 이사 서비스를 이용할 수 있습니다. 보관 기간에 따라 비용이 추가되므로, 미리 보관료를 확인하고 이사 일정을 조율하는 것이 좋습니다.</p>
+    </div>
+    <div class="callout">
+      <h3>7. 계약서에 명시된 서비스 범위 확인</h3>
+      <p>이사 업체마다 서비스 범위가 다르므로 계약 전 정확한 서비스 내용을 확인해야 합니다. 특히 장거리 이사의 경우, 파손 시 배상책임보험 가입 여부와 A/S 규정을 꼼꼼히 확인하여 피해를 예방해야 합니다.</p>
+    </div>
+  </section>
+
+  <section id="checklist">
+    <span id="checklist-anchor" class="anchor"></span>
+    <h2>서울-부산 장거리 이사 필수 체크리스트 (2026년 업데이트)</h2>
+    <p>장거리 이사는 신경 써야 할 행정 처리와 짐 관리가 많습니다. 서울에서 부산으로, 또는 부산에서 서울로 이사할 때 놓치지 말아야 할 체크리스트를 확인하세요.</p>
+    <div class="callout">
+      <h3>1. 이사 4주 전: 계획 수립 및 업체 선정</h3>
+      <ol>
+        <li><span class="highlight">짐량 파악 및 정리:</span> 불필요한 짐을 정리하여 짐량을 최소화합니다.</li>
+        <li><span class="highlight">업체 견적 비교 (최소 3곳):</span> 서울-부산 장거리 이사 전문 업체를 선정하고, 방문 견적을 받습니다.</li>
+        <li><span class="highlight">이사 날짜 확정:</span> 성수기/비수기 요금을 고려하여 날짜를 정합니다.</li>
+        <li><span class="highlight">계약서 작성:</span> 서비스 범위, 추가 비용, 보상 기준 등을 명시하여 계약서를 작성합니다.</li>
+        <li><span class="highlight">폐기물 처리 계획:</span> 대형 가구/가전 폐기물을 지자체에 신고하고 수거를 예약합니다.</li>
+      </ol>
+    </div>
+    <div class="callout">
+      <h3>2. 이사 2주 전: 행정 처리 및 예약</h3>
+      <ol>
+        <li><span class="highlight">이사 전입/전출 신고:</span> 정부 24를 통해 온라인으로 전입신고가 가능합니다.</li>
+        <li><span class="highlight">공과금 정산:</span> 전기(한전), 도시가스(지역 공급업체), 수도 요금을 정산합니다. 특히 도시가스는 철거/설치 예약이 필수입니다.</li>
+        <li><span class="highlight">인터넷 및 IPTV 이전 설치:</span> 통신사에 연락하여 이전 설치를 예약합니다. (장거리 이전은 시간 소요가 길 수 있음)</li>
+        <li><span class="highlight">주차장 및 사다리차 예약:</span> 이사 당일 주차 공간 확보 및 사다리차 사용 여부를 관리 사무소에 확인합니다.</li>
+        <li><span class="highlight">우편물 주소 변경:</span> 우체국 주소 이전 서비스를 신청하여 우편물 누락을 방지합니다.</li>
+      </ol>
+    </div>
+    <div class="callout">
+      <h3>3. 이사 당일: 마무리 및 최종 점검</h3>
+      <ol>
+        <li><span class="highlight">귀중품 및 중요 서류 별도 보관:</span> 신분증, 현금, 통장, 인감 등 귀중품은 직접 휴대합니다.</li>
+        <li><span class="highlight">짐 목록 최종 확인:</span> 이삿짐센터와 함께 짐 목록을 확인하고 운송 전후 파손 여부를 체크합니다.</li>
+        <li><span class="highlight">이사 후 청소:</span> 이삿짐 반출입 후 간단한 청소를 진행합니다.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="faq">
+    <span id="faq-anchor" class="anchor"></span>
+    <h2>자주 묻는 질문 (FAQ)</h2>
+    <dl>
+      <dt>Q1: 서울-부산 장거리 이사 시 견적은 어떻게 산정되나요?</dt>
+      <dd>A: 장거리 이사 견적은 짐의 양(톤수), 이동 거리, 이사 날짜, 작업 인원 수, 사다리차 유무 등 여러 요인에 의해 결정됩니다. 특히 이동 거리가 길어 운송비 비중이 높습니다.</dd>
+      <dt>Q2: 서울에서 부산 이사 시 포장이사는 며칠이 걸리나요?</dt>
+      <dd>A: 짐의 양에 따라 다르지만, 5톤 기준 일반적인 서울-부산 포장이사는 1박 2일 일정으로 진행됩니다. 짐이 적거나 1인 가구는 당일 완료도 가능합니다.</dd>
+      <dt>Q3: 이사 비용 외에 추가적으로 발생하는 비용은 무엇인가요?</dt>
+      <dd>A: 사다리차 사용료, 에어컨 분리/설치 비용, 벽걸이 TV 설치 비용, 보관 이사 비용, 폐기물 처리 비용 등이 추가로 발생할 수 있습니다.</dd>
+      <dt>Q4: 이사 업체 선정 시 가장 중요한 기준은 무엇인가요?</dt>
+      <dd>A: 가격도 중요하지만, 장거리 이사는 파손 위험이 크므로 <span class="highlight">적재물 배상책임보험 가입 여부</span>를 반드시 확인해야 합니다. 또한, 이사 업체가 전문성을 갖춘 곳인지 확인하는 것도 중요합니다.</dd>
+    </dl>
+  </section>
+
+  <section id="contact">
+    <span id="contact-anchor" class="anchor"></span>
+    <h2>서울-부산 장거리 이사 견적 상담 문의</h2>
+    <p>서울과 부산을 잇는 장거리 이사는 전문성과 경험이 중요합니다. 정확한 견적을 위해 상세 정보를 입력해 주시면, 고객님의 짐량과 일정에 맞는 맞춤형 견적을 제공해 드립니다. 견적 문의는 무료입니다.</p>
+
+    <form action="/submit" method="POST" style="max-width:600px; margin:auto; padding:20px; border:1px solid #ddd; border-radius:8px; background:#fafafa;">
+      <label for="name">이름<span style="color:red;">*</span></label><br />
+      <input type="text" id="name" name="name" required style="width:100%; padding:10px; margin-bottom:15px; border:1px solid #ccc; border-radius:4px;" />
+
+      <label for="phone">연락처<span style="color:red;">*</span></label><br />
+      <input type="tel" id="phone" name="phone" required placeholder="010-1234-5678" pattern="[0-9\-]+" style="width:100%; padding:10px; margin-bottom:15px; border:1px solid #ccc; border-radius:4px;" />
+
+      <label for="start-address">출발지 주소 (예: 서울특별시 강남구)</label><br />
+      <input type="text" id="start-address" name="start_address" placeholder="예: 서울특별시 강남구" style="width:100%; padding:10px; margin-bottom:15px; border:1px solid #ccc; border-radius:4px;" />
+
+      <label for="end-address">도착지 주소 (예: 부산광역시 해운대구)</label><br />
+      <input type="text" id="end-address" name="end_address" placeholder="예: 부산광역시 해운대구" style="width:100%; padding:10px; margin-bottom:15px; border:1px solid #ccc; border-radius:4px;" />
+
+      <label for="move-date">이사 희망 날짜<span style="color:red;">*</span></label><br />
+      <input type="date" id="move-date" name="move_date" required style="width:100%; padding:10px; margin-bottom:15px; border:1px solid #ccc; border-radius:4px;" />
+
+      <label for="house-type">이사할 평형대/짐량<span style="color:red;">*</span></label><br />
+      <select id="house-type" name="house_type" required style="width:100%; padding:10px; margin-bottom:15px; border:1px solid #ccc; border-radius:4px;">
+        <option value="">선택하세요</option>
+        <option value="원룸 (1톤)">원룸 (1톤)</option>
+        <option value="투룸 (2.5톤)">투룸 (2.5톤)</option>
+        <option value="30평대 (5톤)">30평대 (5톤)</option>
+        <option value="40평대 이상 (7.5톤 이상)">40평대 이상 (7.5톤 이상)</option>
+      </select>
+
+      <label for="move-service">이사 서비스 유형<span style="color:red;">*</span></label><br />
+      <select id="move-service" name="move_service" required style="width:100%; padding:10px; margin-bottom:15px; border:1px solid #ccc; border-radius:4px;">
+        <option value="">선택하세요</option>
+        <option value="포장이사 풀서비스">포장이사 풀서비스 (추천)</option>
+        <option value="반포장이사">반포장이사</option>
+        <option value="일반이사">일반이사</option>
+      </select>
+
+      <label for="message">추가 요청 사항</label><br />
+      <textarea id="message" name="message" rows="4" style="width:100%; padding:10px; margin-bottom:15px; border:1px solid #ccc; border-radius:4px;" placeholder="예: 사다리차 필요 여부, 에어컨 설치 요청, 특이사항 등"></textarea>
+
+      <button type="submit" class="btn-cta">견적 문의 보내기</button>
+    </form>
+  </section>
+
+  <section id="external-links">
+    <h2>신뢰할 수 있는 이사 관련 정보 출처</h2>
+    <p>장거리 이사를 준비하는 분들을 위해 공신력 있는 기관에서 제공하는 정보를 참고하시기 바랍니다.</p>
+    <ul>
+      <li><a href="https://www.kosc.or.kr/" target="_blank">한국소비자원</a>: 이사 서비스 관련 소비자 보호 정보 및 피해 구제 절차 안내.</li>
+      <li><a href="https://www.kosis.kr/" target="_blank">통계청 국가통계포털 (KOSIS)</a>: 국내 인구 이동 통계 및 주거 관련 정보.</li>
+      <li><a href="https://namu.wiki/w/%EC%9D%B4%EC%82%AC" target="_blank">나무위키 이사 항목</a>: 이사 종류, 절차, 비용 등 일반적인 정보 요약.</li>
+      <li><a href="https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=275558&chrClsCd=010202" target="_blank">국가법령정보센터 (이사화물운송 표준약관)</a>: 이사 계약 시 확인해야 할 법적 표준 약관.</li>
+      <li><a href="https://www.kdi.re.kr/" target="_blank">한국개발연구원 (KDI)</a>: 이사 비용 절약 팁 등 생활 경제 정보 제공.</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>© 2026 서울-부산 장거리 이사 견적 가이드. 사업자 등록번호: 123-45-67890</p>
+    <p>고객센터: <a href="tel:0311234567">031-123-4567</a> | 이메일: <a href="mailto:help@domain.com">help@domain.com</a></p>
+  </footer>
+
+  
